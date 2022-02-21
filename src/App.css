@@ -1,3 +1,74 @@
 .App {
+  background-image: url('./images/background.png');
   text-align: center;
+}
+
+header {
+  color: aliceblue;
+}
+
+h2 {
+  color: aliceblue;
+}
+
+.planet-card {
+  align-items: center;
+  width: 150px;
+}
+
+.planet-card:hover {
+  background: rgba(63, 82, 80, 0.4);
+  border-radius: 15%;
+  width: 200px;
+}
+
+.planet-card p {
+  color: aliceblue;
+}
+
+.planet-card img {
+  display: flex;
+  width: 150px;
+
+}
+
+.planet-card img:hover {
+  display: flex;
+  filter: blur(1px);
+  width: 200px;
+}
+
+.planet-card img:active {
+  display: flex;
+  filter: saturate(2);
+  width: 200px;
+}
+
+.solar-system {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.missions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.mission-card {
+  background: rgba(63, 82, 80, 0.4);
+  color: aliceblue;
+  height: 200px;
+  margin: 10px;
+  width: 200px;
+}
+
+.mission-card:hover {
+  background: rgba(63, 82, 80, 0.2);
+}
+
+.mission-card:active {
+  background: rgba(171, 182, 25, 0.2);
 }
