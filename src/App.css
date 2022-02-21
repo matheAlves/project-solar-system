@@ -6,15 +6,19 @@
 
 header {
   color: aliceblue;
+  font-size: x-large;
+  padding-top: 25px;
 }
 
 h2 {
   color: aliceblue;
+  margin-top: 50px;
 }
 
 .planet-card {
   align-items: center;
-  transition: width 0.5s , font-size 2s , color 1s;
+  color: rgba(240, 248, 255, 0);
+  transition: width 0.5s , font-size 1s , color 1s;
   width: 150px;
 }
 
@@ -34,12 +38,15 @@ h2 {
 }
 
 .planet-card p {
-  margin-bottom: 0;
+  margin-bottom: 5px;
 }
 
-/* animação baseada neste exemplo: https://codepen.io/teerapuch/pen/vLJXeR */
+/* animação baseada nestes códigos: https://codepen.io/teerapuch/pen/vLJXeR
+e https://dev.to/suyashvash/how-to-make-floating-animation-in-html-css-51da
+*/
+
 .planet-card img:hover {
-  animation-duration: 11000ms;
+  animation-duration: 20000ms;
   animation-iteration-count: infinite;
   animation-name: spin;
   animation-timing-function: linear;
@@ -47,22 +54,33 @@ h2 {
   display: flex;
   filter: saturate(5);
   justify-content: center;
+  transform: translateY(-17%);
   width: 290px;
 }
 
 @keyframes spin {
 
-  from {
-    transform: rotate(0deg);
+  0% {
+    transform: rotate(0deg) translateY(-17%);
   }
 
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: rotate(180deg) translateY(10%);
   }
+
+  75% {
+    transform: rotate(270deg) translateY(-10%);
+  }
+
+  100% {
+    transform: rotate(360deg) translateY(-17%);
+  }
+
 }
 
 .planet-card img:active {
-  animation-duration: 2500ms;
+  animation-duration: 2000ms;
+  cursor: grabbing;
   filter: opacity(50%);
 }
 
