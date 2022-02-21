@@ -1,5 +1,6 @@
 .App {
   background-image: url('./images/background.png');
+  font-family: Cinzel , serif;
   text-align: center;
 }
 
@@ -13,35 +14,56 @@ h2 {
 
 .planet-card {
   align-items: center;
-  transition: width 0.5s;
+  transition: width 0.5s , font-size 2s , color 1s;
   width: 150px;
 }
 
 .planet-card:hover {
-  background: rgba(63, 82, 80, 0.4);
-  border-radius: 10%;
-  width: 200px;
-}
-
-.planet-card p {
+  border-radius: 30%;
   color: aliceblue;
+  font-size: 40px;
+  height: 270px;
+  width: 270px;
 }
 
 .planet-card img {
   display: flex;
+  justify-self: center;
+  transition: width 1s , filter 1s;
   width: 150px;
-
 }
 
+.planet-card p {
+  margin-bottom: 0;
+}
+
+/* animação baseada neste exemplo: https://codepen.io/teerapuch/pen/vLJXeR */
 .planet-card img:hover {
+  animation-duration: 11000ms;
+  animation-iteration-count: infinite;
+  animation-name: spin;
+  animation-timing-function: linear;
+  cursor: pointer;
   display: flex;
-  width: 200px;
+  filter: saturate(5);
+  justify-content: center;
+  width: 290px;
+}
+
+@keyframes spin {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .planet-card img:active {
-  display: flex;
-  filter: saturate(2);
-  width: 200px;
+  animation-duration: 2500ms;
+  filter: opacity(50%);
 }
 
 .solar-system {
@@ -59,11 +81,13 @@ h2 {
 
 .mission-card {
   background: rgba(63, 82, 80, 0.4);
-  border-radius: 10%;
+  border-radius: 5%;
   color: aliceblue;
+  cursor: pointer;
+  font-size: large;
   height: 200px;
   margin: 10px;
-  width: 200px;
+  width: 350px;
 }
 
 .mission-card:hover {
